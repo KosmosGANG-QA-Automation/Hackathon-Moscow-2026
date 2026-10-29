@@ -1,0 +1,29 @@
+# Зависимости и пакеты
+node_modules/
+/npm-debug.log*
+/yarn-error.log*
+/yarn-debug.log*
+/pnpm-debug.log*
+
+# Сборка Next.js и кэш
+.next/
+out/
+tsconfig.tsbuildinfo
+
+# Локальные переменные окружения (кроме примера)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Логи и файлы конфигурации AI-агентов (Claude, Vercel и др.)
+CLAUDE.md
+AGENTS.md
+.claude/
+.anthropic/
+.vercel
+
+# Системные файлы
+.DS_Store
+Thumbs.db
