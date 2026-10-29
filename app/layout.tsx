@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "Мастер спорта по боксу, чемпион Страны. Тренировки онлайн и офлайн, обучение C#.",
     type: "website",
     locale: "ru_RU",
-    images: [{ url: "/logo.jpg", alt: "Косов Максим Александрович, тренер по боксу" }],
+    images: [{ url: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.jpg`, alt: "Косов Максим Александрович, тренер по боксу" }],
   },
 };
 

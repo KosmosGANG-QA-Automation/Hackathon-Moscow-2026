@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,7 +42,7 @@ export default async function ServicePage({ params }: Props) {
           </div>
           <div className="float mx-auto grid aspect-square w-full max-w-xs place-items-center rounded-[2rem] border border-line bg-gradient-to-br from-surface-2 to-surface">
             {s.slug === "merch" ? (
-              <Image src="/photos/kosmos-gang.jpg" alt="Kosmos Gang" width={520} height={760} priority className="h-full w-full rounded-[2rem] object-cover object-[50%_70%]" />
+              <Image src={asset("/photos/kosmos-gang.jpg")} alt="Kosmos Gang" width={520} height={760} priority className="h-full w-full rounded-[2rem] object-cover object-[50%_70%]" />
             ) : (
               <ServiceIcon slug={s.slug} className="h-40 w-40 text-accent" />
             )}
@@ -89,7 +90,7 @@ export default async function ServicePage({ params }: Props) {
                 { src: "/photos/kosmos-gang.jpg", alt: "Kosmos Gang", pos: "object-[50%_70%]" },
               ].map((p) => (
                 <div key={p.src} className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-line">
-                  <Image src={p.src} alt={p.alt} fill sizes="(min-width: 768px) 50vw, 100vw" className={`object-cover ${p.pos}`} />
+                  <Image src={asset(p.src)} alt={p.alt} fill sizes="(min-width: 768px) 50vw, 100vw" className={`object-cover ${p.pos}`} />
                 </div>
               ))}
             </div>

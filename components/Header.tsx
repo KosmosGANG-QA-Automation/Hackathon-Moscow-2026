@@ -1,5 +1,6 @@
 "use client";
 
+import { asset } from "@/lib/asset";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -42,7 +43,7 @@ export default function Header() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
         <Link href="/" className="font-display flex items-center gap-2 text-xl" aria-label="На главную">
-          <Image src="/logo.jpg" alt="" width={40} height={40} priority className="h-10 w-10 rounded-full border border-line object-cover" />
+          <Image src={asset("/logo.jpg")} alt="" width={40} height={40} priority className="h-10 w-10 rounded-full border border-line object-cover" />
           <span className="hidden sm:inline">Максим Косов</span>
         </Link>
 

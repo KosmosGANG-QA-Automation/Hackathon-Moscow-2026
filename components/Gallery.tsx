@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { gymPhotos } from "@/lib/data";
@@ -10,7 +11,7 @@ export default function Gallery() {
         <Reveal key={g.src} delay={(i % 3) * 100} className={i % 3 === 1 ? "md:mt-12" : ""}>
           <figure className="group relative aspect-[4/5] overflow-hidden rounded-3xl border border-line bg-surface">
             <Image
-              src={g.src}
+              src={asset(g.src)}
               alt={g.alt}
               fill
               sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"

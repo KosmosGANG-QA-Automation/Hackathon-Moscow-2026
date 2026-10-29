@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
@@ -46,7 +47,7 @@ export default function Home() {
 
           <div className="relative mx-auto w-full max-w-sm">
             <Image
-              src="/logo.jpg"
+              src={asset("/logo.jpg")}
               alt="Логотип: Косов Максим Александрович, тренер по боксу"
               width={112}
               height={112}
@@ -55,7 +56,7 @@ export default function Home() {
             />
             <div className="float relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-line bg-gradient-to-br from-surface-2 to-surface">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgb(225_29_46/0.35),transparent_60%)]" aria-hidden />
-              <Image src="/photos/portrait.jpg" alt="Максим Косов" fill priority sizes="(min-width: 768px) 384px, 90vw" className="object-cover object-top" />
+              <Image src={asset("/photos/portrait.jpg")} alt="Максим Косов" fill priority sizes="(min-width: 768px) 384px, 90vw" className="object-cover object-top" />
               <div className="absolute inset-0 bg-gradient-to-t from-bg/80 via-transparent to-transparent" aria-hidden />
               <div className="absolute inset-x-4 bottom-4 grid grid-cols-2 gap-3">
                 <div className="rounded-2xl border border-white/10 bg-bg/70 p-4 backdrop-blur">

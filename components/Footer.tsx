@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Image from "next/image";
 import Link from "next/link";
 import { nav, profile, services } from "@/lib/data";
@@ -7,7 +8,7 @@ export default function Footer() {
     <footer className="relative z-10 mt-24 border-t border-line bg-surface/60">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
         <div>
-          <Image src="/logo.jpg" alt="Косов Максим Александрович, тренер по боксу" width={96} height={96} className="h-24 w-24 rounded-full border border-line object-cover" />
+          <Image src={asset("/logo.jpg")} alt="Косов Максим Александрович, тренер по боксу" width={96} height={96} className="h-24 w-24 rounded-full border border-line object-cover" />
           <p className="font-display mt-4 text-2xl">{profile.short}</p>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted">
             Мастер спорта по боксу, чемпион Страны. Тренер, преподаватель C# и автор собственного мерча.

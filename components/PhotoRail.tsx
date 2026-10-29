@@ -1,3 +1,4 @@
+import { asset } from "@/lib/asset";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { lifePhotos } from "@/lib/data";
@@ -11,7 +12,7 @@ export default function PhotoRail() {
           <figure key={p.src} className="group w-[72%] shrink-0 snap-start sm:w-[300px] lg:w-[340px]">
             <div className="relative aspect-[3/4] overflow-hidden rounded-3xl border border-line bg-surface">
               <Image
-                src={p.src}
+                src={asset(p.src)}
                 alt={p.alt}
                 fill
                 sizes="(min-width: 1024px) 340px, (min-width: 640px) 300px, 72vw"
