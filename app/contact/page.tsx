@@ -1,5 +1,9 @@
 "use client";
 
+import logoImg from "@/public/logo.jpg";
+// Если в блоке "Максим Косов" (где сейчас градиентный квадрат) тоже должна быть фотография,
+// импортируйте её (например, avatarImg из папки photos):
+import avatarImg from "@/public/photos/logo.jpg"; 
 import { Suspense } from "react";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
